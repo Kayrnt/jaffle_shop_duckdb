@@ -1,8 +1,22 @@
 jaffle_shop:
 
-  target: dev
+  target: dev_bq
   outputs:
-    dev:
+    dev_duckdb:
       type: duckdb
-      path: 'jaffle_shop.duckdb'
+      path: dev.duckdb
       threads: 24
+
+    dev_bq:
+      method: "{{ env_var('METHOD', 'oauth') }}"
+      #project: "{{ env_var('PROJECT', 'teads-automated-tests') }}"
+      project: "teads-automated-tests"
+      execution_project: "{{ env_var('EXECUTION_PROJECT') }}"
+      dataset: "{{ env_var('DATASET') }}"
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      location: "{{ env_var('LOCATION', 'US') }}"
+      priority: interactive
+      retries: 0
+      threads: 24
+      timeout_seconds: 1000000
+      type: bigquery
