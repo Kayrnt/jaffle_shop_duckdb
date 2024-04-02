@@ -1,6 +1,6 @@
 jaffle_shop:
 
-  target: dev_bq
+  target: dev_duckdb
   outputs:
     dev_duckdb:
       type: duckdb

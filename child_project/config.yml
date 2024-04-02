@@ -1,0 +1,16 @@
+project: child_project
+
+gateways:
+    local:
+        connection:
+            type: duckdb
+            database: db.db
+
+    memory:
+        connection:
+            type: duckdb
+
+default_gateway: local
+
+model_defaults:
+    dialect: 'duckdb'
