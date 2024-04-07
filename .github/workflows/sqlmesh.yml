@@ -37,7 +37,7 @@ jobs:
           ref: main
 
       - name: Install SQLMesh + Dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r ${{ github.workspace }}/requirements.txt
         shell: bash
 
       - name: Run CI/CD Bot
