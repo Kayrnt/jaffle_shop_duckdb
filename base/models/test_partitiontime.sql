@@ -7,7 +7,8 @@
             "data_type": "datetime",
             "granularity": "hour",
             "time_ingestion_partitioning": true
-        }
+        },
+        time_column='date_hour'
     )
 }}
 

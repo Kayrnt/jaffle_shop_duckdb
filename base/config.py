@@ -6,7 +6,9 @@ from sqlmesh.dbt.loader import sqlmesh_config
 
 config = sqlmesh_config(
     Path(__file__).parent,
-    state_connection=DuckDBConnectionConfig(),
+    state_connection=DuckDBConnectionConfig(
+        database="dev.duckdb"
+    ),
 )
 
-print(config)
+# print(config)

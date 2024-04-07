@@ -1,6 +1,7 @@
 {{ config(
     cluster_by=["customer_id", "last_name"],
 ) }}
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}
