@@ -40,6 +40,10 @@ jobs:
         run: pip install -r ${{ github.workspace }}/requirements.txt
         shell: bash
 
+      - name: Install dbt packages
+        run: cd ${{ github.workspace }}/base && dbt deps
+        shell: bash
+
       - name: Run CI/CD Bot
         # Add if statement so we don't run-all on merged PR
         if: github.event.pull_request.merged == false

@@ -1,0 +1,9 @@
+#SQLMesh
+sqlmesh[bigquery,dbt,github]
+
+# Database adapter
+dbt-duckdb>=1.7.3,<1.8.0
+dbt-bigquery>=1.7.3,<1.8.0
+
+# dbt Core 1.
+dbt-core>=1.7.9,<1.8.0
