@@ -1,6 +1,8 @@
 name: SQLMesh Bot
 run-name: 🚀SQLMesh Bot 🚀
 on:
+  # Run on every push
+  push:
   pull_request:
     types: [opened, reopened, synchronize, closed]
 # The latest commit is the one that will be used to create the PR environment and deploy to production
