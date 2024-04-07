@@ -50,4 +50,4 @@ jobs:
         # `main` should be the name of your branch that represents production
         if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
         run: |
-        sqlmesh_cicd -p ${{ github.workspace }}/base github --token ${{ secrets.GITHUB_TOKEN }} deploy-production
+          sqlmesh_cicd -p ${{ github.workspace }}/base github --token ${{ secrets.GITHUB_TOKEN }} deploy-production
