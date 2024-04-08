@@ -1,6 +1,11 @@
 name: SQLMesh Bot
 run-name: 🚀SQLMesh Bot 🚀
-on: [push, pull_request]
+on:
+  pull_request:
+    types:
+      - synchronize
+      - opened
+      - closed
 # The latest commit is the one that will be used to create the PR environment and deploy to production
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
